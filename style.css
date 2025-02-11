@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: linear-gradient(rgba(50, 43, 43, 0.3), rgba(190, 163, 163, 0.3)),
+    url("https://pxwall.com/wp-content/uploads/2019/04/4K-Nature-Desktop-Wallpapers.jpg");
+  font-family: "Montserrat", sans-serif;
+  background-size: cover;
+  height: 100vh;
+}
+#containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  height: 500px;
+}
+.container2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: rgb(36, 40, 41);
+  padding-right: 10px;
+  max-width: 800px;
+  height: 300px;
+  width: 590px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.container1 {
+  border: 3px solid black;
+  border-radius: 20px;
+  text-align: center;
+  height: 300px;
+  background-image: linear-gradient(90deg, #1f305e, #008e97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0;
+  margin-left: -20px;
+  height: 315px;
+  width: 260px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: height 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+.date {
+  position: absolute;
+  top: 20px;
+  left: 19px;
+  text-align: left;
+}
+
+.weather {
+  position: absolute;
+  bottom: 20px;
+}
+#temp {
+  font: bolder;
+  font-size: 24px;
+  font-weight: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(247, 247, 156, 0.759);
+}
+
+#form {
+  padding: 1px;
+  margin-top: 20px;
+  position: absolute;
+  top: 200px;
+  background-color: rgb(36, 40, 41);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+#input {
+  border-radius: 5px;
+  border: 1px solid rgba(32, 18, 18, 0.695);
+  height: 30px;
+  padding: 0 10px;
+  flex-grow: 1;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+#input:focus {
+  border-color: rgb(133, 236, 254);
+  box-shadow: 0 0 8px rgba(157, 240, 255, 0.6);
+  outline: none;
+}
+
+button.icon {
+  border-radius: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: white;
+  font-size: 16px;
+  margin-left: 3px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+button.icon:hover {
+  background-color: rgb(99, 199, 229);
+  transform: scale(1.05);
+}
+button.icon:active {
+  transform: translateY(1px);
+}
+.container3,
+.container4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: 2px solid rgb(43, 42, 42);
+  padding: 10px;
+  width: 295px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.974);
+}
+.container3,
+.container4,
+#form {
+  position: absolute;
+  right: 20px;
+}
+.container4 {
+  top: 120px;
+}
+.container3 {
+  top: 20px;
+}
+#humidities,
+#winds,
+#pressure,
+#direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px;
+  width: 300px;
+}
+
+#humidities i,
+#winds i,
+#pressure i,
+#direction i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#wind-label,
+#humidity-label,
+#pressure-label,
+#direction-label {
+  font-size: 16px;
+  padding-right: 150px;
+}
+#pressure-value,
+#wind {
+  margin-left: -30px;
+}
+@media screen and (max-width: 768px) {
+  button.icon {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  #input {
+    width: calc(100% - 20px);
+  }
+
+  #humidities,
+  #winds,
+  #pressure,
+  #direction {
+    flex-wrap: nowrap; /* Prevent rows from wrapping */
+    justify-content: space-between;
+  }
+  .container2 {
+    flex-direction: column;
+    height: 700px;
+    width: auto;
+  }
+  .container1 {
+    width: 500px;
+    margin: 15px 15px;
+  }
+  .container1:hover {
+    width: 500px !important;
+    margin: 15px 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3) !important;
+    transform: none !important;
+    animation: none;
+  }
+  #containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin: 10px 10px;
+  }
+  .container3,
+  .container4,
+  #form {
+    position: static;
+    width: 80%;
+    margin: 10px 0;
+    text-align: left;
+  }
+}
+@media (hover: hover) {
+  /* Hover effects only for devices that support proper hovering */
+  .container1:hover {
+    height: 330px;
+    width: 270px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.7);
+  }
+}
